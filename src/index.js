@@ -1,5 +1,6 @@
-console.log('asd', 'asdasd')
-const name = {
-  ha: 123
+import React from 'react'
+
+const Spinner = () => {
+  return <div>asd</div>
 }
-var a = { b: 123 }
+export default Spinner
