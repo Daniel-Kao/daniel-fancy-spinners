@@ -1,34 +1,47 @@
 {
-	"name": "daniel-fancy-spinners",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Daniel-Kao/daniel-fancy-spinners.git"
-	},
-	"keywords": [
-		"react",
-		"css",
-		"spinners"
-	],
-	"author": "daniel kao",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/Daniel-Kao/daniel-fancy-spinners/issues"
-	},
-	"homepage": "https://github.com/Daniel-Kao/daniel-fancy-spinners#readme",
-	"devDependencies": {
-		"eslint": "^7.10.0",
-		"eslint-config-standard": "^14.1.1",
-		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-node": "^11.1.0",
-		"eslint-plugin-promise": "^4.2.1",
-		"eslint-plugin-standard": "^4.0.1",
-		"prettier-eslint": "^11.0.0",
-		"prettier-eslint-cli": "^5.0.0"
-	}
+  "name": "daniel-fancy-spinners",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint '**/*.js",
+    "lint:fix": "prettier-eslint $PWD/'**/*.{js,css}' --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier-eslint $PWD/'**/*.{js,css}' --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daniel-Kao/daniel-fancy-spinners.git"
+  },
+  "keywords": [
+    "react",
+    "css",
+    "spinners"
+  ],
+  "author": "daniel kao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Daniel-Kao/daniel-fancy-spinners/issues"
+  },
+  "homepage": "https://github.com/Daniel-Kao/daniel-fancy-spinners#readme",
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier-eslint": "^11.0.0",
+    "prettier-eslint-cli": "^5.0.0"
+  }
 }
