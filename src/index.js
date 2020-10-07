@@ -1,6 +1,5 @@
-import React from 'react'
+export * from './Leaf'
 
-const Spinner = () => {
-  return <div>asd</div>
-}
-export default Spinner
+export * from './Pulse'
+
+export * from './Rolling'

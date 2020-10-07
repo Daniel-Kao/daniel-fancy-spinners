@@ -1,13 +1,15 @@
 import babel from '@rollup/plugin-babel'
 import resolve from '@rollup/plugin-node-resolve'
+import { string } from 'rollup-plugin-string'
 import { terser } from 'rollup-plugin-terser'
+import pkg from './package.json'
 
 const dist = 'dist'
 const bundle = 'bundle'
 
 export default {
   input: 'src/index.js',
-  external: ['react'],
+  external: [...Object.keys(pkg.peerDependencies || {})],
   output: [
     {
       file: `${dist}/${bundle}.esm.js`,
@@ -28,6 +30,9 @@ export default {
   ],
   plugins: [
     resolve(),
+    string({
+      include: '**/*.css'
+    }),
     babel({
       exclude: 'node_modules/**'
     }),
