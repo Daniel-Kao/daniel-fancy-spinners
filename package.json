@@ -13,6 +13,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
+    "test:staged": "jest --findRelatedTests",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
@@ -23,7 +24,8 @@
   },
   "lint-staged": {
     "src/**/*.js": [
-      "prettier-eslint $PWD/'**/*.{js,css}' --write"
+      "prettier-eslint $PWD/'**/*.{js,css}' --write",
+      "npm run test:staged"
     ]
   },
   "repository": {
