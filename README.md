@@ -1,3 +1,3 @@
 # daniel-fancy-spinners
 
-### go
+### go1
