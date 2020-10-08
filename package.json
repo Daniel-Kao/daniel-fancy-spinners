@@ -13,6 +13,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
+    "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
     "test:staged": "jest --findRelatedTests",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
@@ -55,6 +56,7 @@
     "@storybook/react": "^6.0.26",
     "babel-jest": "^26.5.2",
     "babel-loader": "^8.1.0",
+    "coveralls": "^3.1.0",
     "eslint": "^7.10.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.1",
