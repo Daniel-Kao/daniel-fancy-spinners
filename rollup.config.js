@@ -1,6 +1,6 @@
 import babel from '@rollup/plugin-babel'
+import postcss from 'rollup-plugin-postcss'
 import resolve from '@rollup/plugin-node-resolve'
-import { string } from 'rollup-plugin-string'
 import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
@@ -30,8 +30,9 @@ export default {
   ],
   plugins: [
     resolve(),
-    string({
-      include: '**/*.css'
+    postcss({
+      extract: 'style.min.css',
+      minimize: true
     }),
     babel({
       exclude: 'node_modules/**'
