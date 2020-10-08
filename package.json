@@ -16,7 +16,9 @@
     "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
     "test:staged": "jest --findRelatedTests",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "predeploy": "npm run build-storybook",
+    "deploy": "gh-pages -d storybook-static"
   },
   "husky": {
     "hooks": {
@@ -43,7 +45,7 @@
   "bugs": {
     "url": "https://github.com/Daniel-Kao/daniel-fancy-spinners/issues"
   },
-  "homepage": "https://github.com/Daniel-Kao/daniel-fancy-spinners#readme",
+  "homepage": "https://daniel-kao.github.io/daniel-fancy-spinners/",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
@@ -65,6 +67,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.21.3",
     "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^3.1.0",
     "husky": "^4.3.0",
     "jest": "^26.5.2",
     "lint-staged": "^10.4.0",
@@ -72,8 +75,8 @@
     "prettier-eslint-cli": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-test-renderer": "^16.13.1",
     "react-is": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.28.2",
     "rollup-plugin-string": "^3.0.0",
