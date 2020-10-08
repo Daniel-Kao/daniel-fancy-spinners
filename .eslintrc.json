@@ -1,3 +1,8 @@
 {
-  "extends": ["standard", "plugin:react/recommended", "plugin:jest/recommended"]
+  "extends": [
+    "standard",
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "react-app"
+  ]
 }
