@@ -6,7 +6,7 @@
   "module": "dist/bundle.esm.js",
   "sideEffects": false,
   "scripts": {
-    "lint": "eslint '**/*.js'",
+    "lint": "eslint '**/*.{js,ts,tsx}'",
     "lint:fix": "prettier-eslint $PWD/'**/*.{js,css}' --write",
     "prebuild": "rimraf dist",
     "build": "rollup -c",
