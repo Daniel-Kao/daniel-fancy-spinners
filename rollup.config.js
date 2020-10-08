@@ -29,14 +29,14 @@ export default {
     }
   ],
   plugins: [
-    resolve(),
-    postcss({
-      extract: 'style.min.css',
-      minimize: true
-    }),
+    resolve({ jsnext: true, main: true, browser: true }),
     babel({
       exclude: 'node_modules/**'
     }),
-    terser()
+    postcss({
+      inject: true,
+      minimize: true,
+      extensions: ['.css']
+    })
   ]
 }
