@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="loadingio-spinner-pulse-en9z9u30elk"
+>
+  <div
+    className="ldio-0brxcl0tnpnt"
+  >
+    <div />
+    <div />
+    <div />
+  </div>
+</div>
+`;

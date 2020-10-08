@@ -1,10 +1,9 @@
 import React from 'react'
-import styles from './styles.css'
+import './styles.css'
 
 const Leaf = () => {
   return (
     <>
-      <style>{styles}</style>
       <div className="loadingio-spinner-pulse-en9z9u30elk">
         <div className="ldio-0brxcl0tnpnt">
           <div></div>
